@@ -2,8 +2,8 @@
 
 // [] execVM "vehicleCreate.sqf";
 
-vehicle_classes = ["C_Hatchback_01_sport_F","C_Hatchback_01_F","C_SUV_01_F","C_Van_01_box_F","C_Quadbike_01_F"];
-//vehicle_classes = vehicle_classes + ["RDS_Golf4_Civ_01","LandRover_TK_CIV_EP1"]; // mods
+vehicle_classes = ["C_Hatchback_01_sport_F","C_Hatchback_01_F","C_SUV_01_F","C_Van_01_box_F","C_Quadbike_01_F","C_Van_01_fuel_F","C_Offroad_02_unarmed_F"];
+vehicle_classes = vehicle_classes + ["UK3CB_C_Hatchback","UK3CB_C_Hilux_Closed","UK3CB_C_Hilux_Open","UK3CB_C_Ikarus","UK3CB_C_Lada","UK3CB_C_LandRover_Closed","UK3CB_BAF_LandRover_Soft_Green_A","rhsusf_mrzr4_d","UK3CB_C_SUV","UK3CB_C_MMT"]; //Vehicles from mods
 num_of_vehicles_toSpawn = 40; // 36
 vehicle_spawner_debug = false;
 vehicle_min_roadSegement_spacing = 3; //8

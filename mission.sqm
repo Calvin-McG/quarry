@@ -8,7 +8,7 @@ class EditorData
 	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=405;
+		nextID=417;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3157.0698,182.40826,13286.752};
-		dir[]={0.45272616,-0.36268401,-0.81471515};
-		up[]={0.17623015,0.93190956,-0.31714398};
-		aside[]={-0.87412179,1.6360427e-006,-0.48573261};
+		pos[]={3076.9041,307.23422,13711.246};
+		dir[]={-0.53157389,-0.68481439,0.49872211};
+		up[]={-0.499468,0.72872037,0.46860567};
+		aside[]={0.6842044,5.2383402e-006,0.72926152};
 	};
 };
 binarizationWanted=0;
@@ -67,13 +67,15 @@ addons[]=
 	"CUP_CAStructures_E_HouseC",
 	"CUP_Buildings_Config",
 	"CUP_New_Buildings",
-	"A3_Structures_F_Dominants_Lighthouse"
+	"A3_Structures_F_Dominants_Lighthouse",
+	"rhs_c_pts",
+	"A3_Boat_F_Jets_Carrier_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=36;
+		items=38;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -308,6 +310,20 @@ class AddonsMetaData
 			className="CUP_New_Buildings";
 			name="CUP_New_Buildings";
 		};
+		class Item36
+		{
+			className="rhs_c_pts";
+			name="PTS";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item37
+		{
+			className="A3_Boat_F_Jets";
+			name="Arma 3 Jets - Boats and Submersibles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=11740875;
@@ -365,7 +381,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=238;
+		items=240;
 		class Item0
 		{
 			dataType="Marker";
@@ -391,18 +407,19 @@ class Mission
 		class Item2
 		{
 			dataType="Trigger";
-			position[]={3524.8555,4.1684847,13188.285};
+			position[]={3488.7729,4.1684847,13198.635};
 			angle=3.4209146;
 			class Attributes
 			{
 				name="quarry_trigger";
-				sizeA=690;
+				sizeA=727.53748;
 				sizeB=900;
 				interuptable=1;
 				isRectangle=1;
 			};
 			id=2;
 			type="EmptyDetector";
+			atlOffset=0.13601398;
 		};
 		class Item3
 		{
@@ -2419,8 +2436,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3176.4966,6.5150175,12781.116};
-				angles[]={0,0.45668468,0};
+				position[]={2543.2202,6.8593373,12536.528};
+				angles[]={0,5.7582803,0};
 			};
 			side="Empty";
 			class Attributes
@@ -2428,7 +2445,7 @@ class Mission
 			};
 			id=120;
 			type="C_Boat_Civil_04_F";
-			atlOffset=14.735719;
+			atlOffset=48.693573;
 		};
 		class Item59
 		{
@@ -2475,8 +2492,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3116.4741,4.0353384,12709.763};
-				angles[]={0,0.69813168,0};
+				position[]={2723.3994,3.381423,13203.463};
+				angles[]={0,0.2715818,0};
 			};
 			side="Empty";
 			class Attributes
@@ -2484,7 +2501,7 @@ class Mission
 			};
 			id=123;
 			type="Submarine_01_F";
-			atlOffset=1.7225304;
+			atlOffset=19.292366;
 		};
 		class Item61
 		{
@@ -4885,8 +4902,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3601.2703,11.266932,13138.188};
-				angles[]={0.014664836,4.7813821,0.027993103};
+				position[]={3617.0413,16.152771,12920.646};
+				angles[]={6.2498641,5.4032974,0.043971907};
 			};
 			side="Empty";
 			flags=4;
@@ -4896,7 +4913,7 @@ class Mission
 			};
 			id=298;
 			type="UK3CB_ADC_C_Ikarus";
-			atlOffset=-0.00045013428;
+			atlOffset=-0.0023784637;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6750,6 +6767,82 @@ class Mission
 			};
 			id=397;
 			type="Land_PortableLight_double_F";
+		};
+		class Item238
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3537.8655,3.0851612,13655.553};
+				angles[]={0.18711846,0,0.09834861};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{_nil = [this,1] spawn qry_fnc_civCar;}";
+			};
+			id=405;
+			type="rhs_pts_vmf";
+			atlOffset=-0.0071358085;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit"",""Medikit""],[4,1]],[[],[]],[[],[]],[[""rhs_sidor""],[7]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="rhs_decalNumber_type";
+					expression="_this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cRHSPTSNumberPlaces, _value]]] call rhs_fnc_decalsInit";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Default";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item239
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2829.6189,0,13724.415};
+				angles[]={0,0.27390346,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=406;
+			type="Land_Carrier_01_base_F";
+			atlOffset=62.280926;
 		};
 	};
 	class Connections

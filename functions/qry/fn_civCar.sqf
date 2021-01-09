@@ -44,7 +44,7 @@ if (isServer) then {
             _unit addItemCargoGlobal ["V_Press_F",1];
         };
         case 7: {//Tactical ladder
-            _unit addBackpackCargoGlobal "ACE_TacticalLadder_Pack";
+            _unit addBackpack "ACE_TacticalLadder_Pack";
         };
 		default {//Spare ammo, medical supplies
 			_unit addMagazineCargoGlobal ["11Rnd_45ACP_Mag",5];
