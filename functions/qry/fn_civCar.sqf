@@ -8,7 +8,7 @@ if (isServer) then {
 	clearBackpackCargoGlobal _unit;
 	
 	//Random gear
-	_gearOpt = round random 9; //Generates number from 0 to 9. 7+ will result in the default case being called
+	_gearOpt = round random 9; //Generates number from 0 to 9. 8+ will result in the default case being called
 	switch (_gearOpt) do {
 		case 0:	{//Sawed off with four shells
             _unit addMagazineCargoGlobal ["2Rnd_12Gauge_Slug",1];
@@ -42,6 +42,9 @@ if (isServer) then {
             _unit addMagazineCargoGlobal ["11Rnd_45ACP_Mag",2];
             _unit addMagazineCargoGlobal ["16Rnd_9x21_Mag",2];
             _unit addItemCargoGlobal ["V_Press_F",1];
+        };
+        case 7: {//Tactical ladder
+            _unit addBackpackCargoGlobal "ACE_TacticalLadder_Pack";
         };
 		default {//Spare ammo, medical supplies
 			_unit addMagazineCargoGlobal ["11Rnd_45ACP_Mag",5];
