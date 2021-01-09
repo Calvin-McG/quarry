@@ -7,7 +7,7 @@
 
 class Header
 {
-	gameType = DM;
+	gameType = RPG;
 	minPlayers = 2;
 	maxPlayers = 44;
 };
