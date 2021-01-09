@@ -9,42 +9,38 @@ if (local _unit) then {
 	removeHeadgear _unit;
 	removeVest _unit;
 	
-	_unit forceAddUniform "U_C_Poor_2";
+	_unit forceAddUniform "demian2435_police_man_uniform";
 	_unit addHeadgear 'H_Cap_police';
-    _unit addVest 'V_TacVest_blk_POLICE';
-   
-    _unit addMagazines["hlc_30Rnd_9x19_B_MP5",6];
-    _unit addWeapon 'hlc_smg_mp5a4';
-	
-    _unit addPrimaryWeaponItem 'optic_ACO_grn';
-    _unit addPrimaryWeaponItem 'acc_flashlight';
+    _unit addVest 'TRYK_V_tacv1LP_BK';
+    _unit addBackpack "ACE_TacticalLadder_Pack";
+
+    _unit addMagazines["ACE_40mm_Flare_white",4];
+    _unit addMagazines["1Rnd_Smoke_Grenade_shell",4];
+
+    _unit addMagazines["hlc_30Rnd_9x19_GD_MP5",6];
+    _unit addWeapon 'hlc_smg_9mmar';
+
     //FIX
-    _unit addMagazines["16Rnd_9x21_Mag",3];
-    _unit addWeapon 'hgun_Rook40_F';
-    
-	_unit addMagazines["SmokeShell",1];
-	_unit addMagazines["Chemlight_blue",3];
+    _unit addMagazines["rhsusf_mag_17Rnd_9x19_JHP",3];
+    _unit addWeapon 'rhsusf_weap_glock17g4';
+    _unit addWeaponItem ["rhsusf_weap_glock17g4", "ACE_muzzle_mzls_smg_02"];
+    _unit addWeaponItem ["rhsusf_weap_glock17g4", "acc_flashlight_pistol"];
+
+	_unit addMagazines["Chemlight_blue",4];
 	
 	_unit addItem "FirstAidKit";
 	_unit addItem "FirstAidKit";
 	_unit addItem "FirstAidKit";
 	_unit addItem "ACE_epinephrine";
 	_unit addItem "ACE_epinephrine";
+	_unit addItem "ACE_EarPlugs";
 	_unit addWeapon "Binocular";
+	_unit linkItem "rhsusf_ANPVS_14";
 	_unit linkItem "ItemGPS";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ItemRadio";
-	
-	
-	if (isClass(configFile >> "CfgPatches" >> "acre_main")) then {
-		_unit addItem "ACRE_PRC148";
-	};
-	
-	if (isClass(configFile >> "CfgPatches" >> "ace_hearing")) then {
-		_unit setVariable ["ACE_hasEarPlugsIn", true, true];
-	};
-	// 148
+    _unit linkItem "ItemRadioAcreFlagged";
 		
 };
 
