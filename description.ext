@@ -1,0 +1,203 @@
+// ============================================================================================
+
+#include "R3F_LOG\desc_include.h"
+
+// F3 - Mission Header
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+class Header
+{
+	gameType = DM;
+	minPlayers = 2;
+	maxPlayers = 44;
+};
+
+
+
+onLoadName = "Quarry V5 Day";
+onLoadMission = "Kill your quarries and do your best to stay alive";
+author = "Snippers, Updated by Calvin";
+loadScreen = "quarry.jpg";
+
+respawn = 1;
+respawndelay = 3;
+//respawnTemplates[] = {"Spectator"};
+respawnTemplates[] = {"Seagull","f_spectator"};
+disabledAI = true;
+
+class Params
+{
+    class param_lifetimer
+    {
+                title = "Life time for contestants in minutes";
+                values[] = {3,4,5,6,7,8,9,10,11,12,13,14,15,20,30};
+                default = 15;
+    };
+
+    //#include "\a3\functions_f\Params\paramDaytimeHour.hpp"
+    //#include "\a3\functions_f\Params\paramWeather.hpp" 
+};
+
+// Menu components for the Spectator Script
+#include "f\spect\config.hpp"
+
+// F3 - Respawn Templates
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+class CfgRespawnTemplates
+{
+	// F3 Spectator Script
+	class f_Spectator
+	{
+		onPlayerRespawn = "f_fnc_CamInit";
+	};
+	
+	//Overwrite Vanilla Seagull
+    class Seagull
+    {
+        onPlayerRespawn = "";
+    };
+};
+
+
+class CfgFunctions
+{
+	class F // Defines the "owner"
+	{
+		#include "f\spect\functions.hpp"
+	};
+	class qry // Quarry function
+	{     
+		class qry {
+			class newCiv {};
+			class newCop {};
+			class policeCar {};
+			class civCar {};
+			class civKilled {};
+            class inTrigger {};
+            class findPlayerSpawnPos {};
+		};
+	};
+};
+class cfgNotifications
+{
+
+	// Notifications for the F3 Safe Start Component
+	class SafeStart
+	{
+		title = "SAFE START";
+		description = "%1";
+		iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
+		duration = 10;
+		priority = 0;
+	};
+};
+
+class CfgDebriefing
+{
+	class End1
+	{
+		title = "You won!";
+		subtitle = "You are the last alive civilian!";
+		description = "Good job on staying alive to the end and kicking some ass!";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class End2
+	{
+		title = "Gameover!";
+		subtitle = "You were not the last civilian to live!";
+		description = "Only one civilian player remains and they are victorious! Unfortunately that was not you.";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+};
+
+
+
+class RscTitles
+{
+	class RscPicture
+	{
+	   type =0;
+	   idc = -1;
+	   style =48;
+	   colorBackground[] = {0, 0, 0, 1};
+	   colorText[] = {1, 1, 1, 1};
+	   font = "PuristaMedium";
+	   size = 0.5;
+	};
+	class MissionPassedPic
+	{
+		name = "Mission Passed";
+		duration = 9; //how long it is visible
+		idd = -1;
+		movingEnable = 0;
+		class controlsBackground { 
+			// define controls here
+		};
+		class objects { 
+			// define controls here
+		};
+		class controls
+		{
+			class mpassedPic : RscPicture
+			{
+				idc = -1;
+				text="img\missionpassed.paa";
+				x=0;//ST_CENTER; 
+				y=0;//ST_VCENTER; 
+				w=1; 
+				h=0.7;
+				sizeEx = 0.4;
+			};
+		};
+	};
+    class MissionPassedPic2
+	{
+		name = "Thug Life";
+		duration = 9; //how long it is visible
+		idd = -1;
+		movingEnable = 0;
+		class controlsBackground { 
+			// define controls here
+		};
+		class objects { 
+			// define controls here
+		};
+		class controls
+		{
+			class mpassedPic : RscPicture
+			{
+				idc = -1;
+				text="img\thuglife.paa";
+				x=0;//ST_CENTER; 
+				y=0.6;//ST_VCENTER; 
+				w=1; 
+				h=0.7;
+				sizeEx = 0.4;
+			};
+		};
+	};
+};
+class CfgSounds
+{
+	sounds[] = {};
+	class victoryEndSound
+	{
+		name = "viceend";
+		sound[] = {"\vicecity.ogg", db+0, 1.0};
+		titles[] = {};
+	};
+	class victoryEndSound2
+	{
+		name = "super";
+		sound[] = {"\Biamby_Super.ogg", db+0, 1.0};
+		titles[] = {};
+	};
+};
+
