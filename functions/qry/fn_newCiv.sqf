@@ -36,43 +36,37 @@ if (local _unit) then {
 	removeheadgear _unit;
 	_unit forceAddUniform (_uniforms call BIS_fnc_selectRandom);
 	_unit addheadgear (_headgears call BIS_fnc_selectRandom);
-	if (isClass(configFile >> "CfgPatches" >> "ace_hearing")) then {
-		_unit setVariable ["ACE_hasEarPlugsIn", true, true];
-	};
 	_unit linkItem "ItemGPS";
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	
-	_gearOpt = round random 3;
+	_gearOpt = round random 5;
 	_unit addvest(_vests call BIS_fnc_selectRandom);
 	_unit addbackpack(_backpacks call BIS_fnc_selectRandom);
 	_unit addmagazine "Chemlight_yellow";
 	_unit addmagazine "SatchelCharge_Remote_Mag";
+	_unit addItem "ACE_Earplugs";
 	_unit addmagazines ["ACE_M84",1];
 	_unit addmagazines ["MiniGrenade",1];
 	switch (_gearOpt) do {
-		case 0:	{
-			_unit addmagazines["9Rnd_45ACP_Mag",1];
-			_unit addweapon "hgun_ACPC2_F";
-			_unit addmagazines["9Rnd_45ACP_Mag",4];
-		};
-		case 1: {
-			_unit addmagazines["11Rnd_45ACP_Mag",1];
-			_unit addweapon "hgun_Pistol_heavy_01_F";
-			_unit addmagazines["11Rnd_45ACP_Mag",4];
-		};
-		case 2: {
+	    case 0: {//Modern 45 with RDS and Flashlight
+            _unit addmagazines["11Rnd_45ACP_Mag",1];
+            _unit addweapon "hgun_Pistol_heavy_01_F";
+            _unit addmagazines["11Rnd_45ACP_Mag",4];
+            _unit addWeaponItem ["hgun_Pistol_heavy_01_F", "acc_flashlight_pistol"];
+            _unit addWeaponItem ["hgun_Pistol_heavy_01_F", "optic_mrd"];
+        };
+		case 1: {//9mm with flashlight and standard mags
 			_unit addmagazines["16Rnd_9x21_Mag",1];
-			_unit addweapon "hgun_Rook40_F";
+			_unit addweapon "AMF_Pamas";
 			_unit addmagazines["16Rnd_9x21_Mag",3];
-		};
-		case 3: {
-			_unit addmagazines["6Rnd_45ACP_Cylinder",1];
-			_unit addweapon "hgun_Pistol_heavy_02_F";
-			_unit addmagazines["6Rnd_45ACP_Cylinder",5];
+			_unit addWeaponItem ["AMF_Pamas", "acc_flashlight_pistol"];
 		};
 		default {
-			
+			_unit addmagazines["16Rnd_9x21_Mag",1];
+            _unit addweapon "AMF_Pamas";
+            _unit addmagazines["16Rnd_9x21_Mag",3];
+            _unit addWeaponItem ["AMF_Pamas", "acc_flashlight_pistol"];
 		};
 	};
 };
