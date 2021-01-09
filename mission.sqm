@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3076.9041,307.23422,13711.246};
-		dir[]={-0.53157389,-0.68481439,0.49872211};
-		up[]={-0.499468,0.72872037,0.46860567};
-		aside[]={0.6842044,5.2383402e-006,0.72926152};
+		pos[]={3702.0952,51.931381,12990.829};
+		dir[]={0.41290948,-0.90575945,-0.096796364};
+		up[]={0.8818441,0.4239186,-0.20673081};
+		aside[]={-0.2282377,8.105766e-006,-0.97358131};
 	};
 };
 binarizationWanted=0;
@@ -330,10 +330,58 @@ randomSeed=11740875;
 class ScenarioData
 {
 	author="Calvin";
+	disabledAI=1;
+	class Header
+	{
+		gameType="RPG";
+		minPlayers=2;
+		maxPlayers=44;
+	};
 };
 class CustomAttributes
 {
 	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=1;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="None";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -362,7 +410,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="CA_Calvin_TVTXX_Quarry_8";
+		briefingName="CA_Calvin_TVT44_Quarry_8";
 		overviewText="The Ship/Ass Creed MP but in Arma";
 		startWeather=0.29999998;
 		startWind=0.099999994;
@@ -4913,7 +4961,7 @@ class Mission
 			};
 			id=298;
 			type="UK3CB_ADC_C_Ikarus";
-			atlOffset=-0.0023784637;
+			atlOffset=-0.0024089813;
 			class CustomAttributes
 			{
 				class Attribute0
