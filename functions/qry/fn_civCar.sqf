@@ -1,8 +1,6 @@
 if (isServer) then {
 	_unit = _this select 0;
-	
 
-	
 	//Issue the gear
 	clearWeaponCargoGlobal _unit;
 	clearMagazineCargoGlobal _unit;
