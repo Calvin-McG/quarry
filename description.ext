@@ -14,7 +14,7 @@ class Header
 
 
 
-onLoadName = "Quarry V8";
+onLoadName = "Quarry 8";
 onLoadMission = "Kill your quarries and do your best to stay alive";
 author = "Calvin";
 loadScreen = "quarry.jpg";

@@ -362,7 +362,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="Quarry V8";
+		briefingName="CA_Calvin_TVTXX_Quarry_8";
 		overviewText="The Ship/Ass Creed MP but in Arma";
 		startWeather=0.29999998;
 		startWind=0.099999994;
