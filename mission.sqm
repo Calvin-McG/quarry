@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=290;
+		nextID=291;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3561.4185,72.220444,12961.037};
-		dir[]={0.79890388,-0.39105254,0.45700145};
-		up[]={0.33945447,0.92036074,0.19418022};
-		aside[]={0.49653906,-2.6781345e-007,-0.86802238};
+		pos[]={3693.0107,43.003101,13007.504};
+		dir[]={0.77829099,-0.34291354,-0.52616233};
+		up[]={0.2841447,0.93934268,-0.19209434};
+		aside[]={-0.56010729,-1.4145626e-006,-0.82850319};
 	};
 };
 binarizationWanted=0;
@@ -293,18 +293,42 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3639.6343,12.000251,13123.094};
-				angles[]={0,4.6926966,0.013327583};
+				position[]={3639.634,12.000465,13123.094};
+				angles[]={0,4.6927018,0.013334315};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
+				init="call{_nil = [this,1] spawn qry_fnc_civCar;}";
 			};
 			id=4;
 			type="C_Van_01_box_F";
-			atlOffset=0.0017805099;
+			atlOffset=0.0019989014;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[2]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item4
 		{
@@ -487,7 +511,6 @@ class Mission
 						init="nul = [this] call qry_fnc_newCiv;";
 						name="civ1";
 						description="Civilian";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=19;
@@ -927,29 +950,70 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3242.1387,6.0651002,12473.374};
-						angles[]={6.2299027,6.0624099,0.083802827};
+						position[]={3242.1389,6.0651197,12473.374};
+						angles[]={6.2299004,6.0624013,0.083810709};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="nul = [this] call qry_fnc_newCop;";
+						init="call{nul = [this] call qry_fnc_newCop;}";
 						name="cop1";
 						description="Policeman";
+						isPlayer=1;
 						isPlayable=1;
 					};
 					id=45;
 					type="B_Soldier_F";
-					atlOffset=-4.7683716e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 			};
 			class Attributes
 			{
 			};
 			id=44;
-			atlOffset=-4.7683716e-007;
 		};
 		class Item24
 		{

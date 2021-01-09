@@ -51,9 +51,6 @@ if (isServer) then {
 if (hasInterface) then {
 	if (side player != west) then {
 		player setPos ([quarry_trigger,player] call qry_fnc_findPlayerSpawnPos);
-
-		holstered = 0;  
-		player addAction ["Holster sidearm","arc_holster.sqf",nil,2.5,false,true,"",""];
 	};
 	//Briefing: Instructions
 	if (side player == west) then {
