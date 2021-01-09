@@ -14,9 +14,9 @@ class Header
 
 
 
-onLoadName = "Quarry V5 Day";
+onLoadName = "Quarry V7 Day";
 onLoadMission = "Kill your quarries and do your best to stay alive";
-author = "Snippers, Updated by Calvin";
+author = "Snippers, Ruined by Calvin";
 loadScreen = "quarry.jpg";
 
 respawn = 1;
@@ -35,7 +35,40 @@ class Params
     };
 
     //#include "\a3\functions_f\Params\paramDaytimeHour.hpp"
-    //#include "\a3\functions_f\Params\paramWeather.hpp" 
+    //#include "\a3\functions_f\Params\paramWeather.hpp"
+
+    	class f_param_weather
+    	{
+    		title = "Weather";
+    		values[] = {0,1,2,3};
+    		texts[] = {"Calm","Overcast","Rain","Storm"};
+    		default = 1;
+    		function = "f_fnc_setWeather";		// This function is called to apply the values
+    		isGlobal = 0;						// Execute this only on the server
+    		code = "f_param_weather = %1";
+    	};
+
+    	class f_param_fog
+    	{
+    		title = "Fog";
+    		values[] = {0,1,2};
+    		texts[] = {"None","Light","Heavy"};
+    		default = 0;
+    		function = "f_fnc_SetFog";			// This function is called to apply the values
+    		isGlobal = 0;						// Execute this only on the server
+    		code = "f_param_fog = %1";
+    	};
+
+        class f_param_timeOfDay
+    	{
+    		title = "Time";
+    		values[] = {0,1,2,3,4,5,6,7};
+    		texts[] = {"Dawn","Early Morning","Morning","Noon","Afternoon","Evening","Dusk","Night"};
+    		default = 3;
+    		function = "f_fnc_setTime";			// This function is called to apply the values
+     		isGlobal = 0;						// Execute this only on the server
+     		code = "f_param_timeOfDay = %1";
+    	};
 };
 
 // Menu components for the Spectator Script
@@ -65,6 +98,13 @@ class CfgFunctions
 	class F // Defines the "owner"
 	{
 		#include "f\spect\functions.hpp"
+			class missionConditions
+            {
+                file = "f\missionConditions";
+                class SetTime{};
+                class SetFog{};
+                class SetWeather{};
+            };
 	};
 	class qry // Quarry function
 	{     

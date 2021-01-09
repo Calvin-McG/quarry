@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=285;
+		nextID=290;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3587.5225,84.553177,13087.983};
-		dir[]={0.62366152,-0.40173525,-0.67067754};
-		up[]={0.27357689,0.91575617,-0.29420131};
-		aside[]={-0.7323609,-2.2537424e-006,-0.6810236};
+		pos[]={3238.0891,22.015974,12478.739};
+		dir[]={0.59328872,-0.80495214,0.015946161};
+		up[]={0.80462885,0.59338683,0.021628566};
+		aside[]={0.026872922,-2.7796341e-006,-0.99972212};
 	};
 };
 binarizationWanted=0;
@@ -2060,7 +2060,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3202.0535,54.18367,13127.356};
+				position[]={3202.053,54.183617,13127.356};
 				angles[]={6.1044111,0,0.007400196};
 			};
 			side="Empty";
@@ -2070,7 +2070,7 @@ class Mission
 			};
 			id=114;
 			type="RHS_Ural_Civ_02";
-			atlOffset=0.24689865;
+			atlOffset=0.24684906;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2183,7 +2183,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="-1";
+							value="0";
 						};
 					};
 				};
@@ -2199,10 +2199,10 @@ class Mission
 							{
 								type[]=
 								{
-									"STRING"
+									"SCALAR"
 								};
 							};
-							value="-1";
+							value=8008135;
 						};
 					};
 				};
@@ -2221,7 +2221,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="-1";
+							value="0";
 						};
 					};
 				};
