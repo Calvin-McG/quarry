@@ -40,7 +40,7 @@ if (local _unit) then {
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
 	
-	_gearOpt = round random 5;
+	_gearOpt = round random 5;//Generates number from 0 to 5. 2+ will result in the default case being called
 	_unit addvest(_vests call BIS_fnc_selectRandom);
 	_unit addbackpack(_backpacks call BIS_fnc_selectRandom);
 	_unit addmagazine "Chemlight_yellow";
@@ -56,13 +56,13 @@ if (local _unit) then {
             _unit addWeaponItem ["hgun_Pistol_heavy_01_F", "acc_flashlight_pistol"];
             _unit addWeaponItem ["hgun_Pistol_heavy_01_F", "optic_mrd"];
         };
-		case 1: {//9mm with flashlight and standard mags
+		case 1: {//Beretta with flashlight and standard mags
 			_unit addmagazines["16Rnd_9x21_Mag",1];
 			_unit addweapon "AMF_Pamas";
 			_unit addmagazines["16Rnd_9x21_Mag",3];
 			_unit addWeaponItem ["AMF_Pamas", "acc_flashlight_pistol"];
 		};
-		default {
+		default {//Beretta with flashlight and standard mags
 			_unit addmagazines["16Rnd_9x21_Mag",1];
             _unit addweapon "AMF_Pamas";
             _unit addmagazines["16Rnd_9x21_Mag",3];
