@@ -8,7 +8,7 @@ class EditorData
 	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=417;
+		nextID=418;
 	};
 	class MarkerIDProvider
 	{
@@ -69,13 +69,14 @@ addons[]=
 	"CUP_New_Buildings",
 	"A3_Structures_F_Dominants_Lighthouse",
 	"rhs_c_pts",
-	"A3_Boat_F_Jets_Carrier_01"
+	"A3_Boat_F_Jets_Carrier_01",
+	"AICommand"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=38;
+		items=39;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -324,6 +325,11 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item38
+		{
+			className="AICommand";
+			name="AICommand";
+		};
 	};
 };
 randomSeed=11740875;
@@ -410,8 +416,9 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="CA_Calvin_TVT44_Quarry_8";
+		briefingName="CA_Calvin_TVT44_Quarry_9";
 		overviewText="The Ship/Ass Creed MP but in Arma";
+		resistanceWest=0;
 		startWeather=0.29999998;
 		startWind=0.099999994;
 		startWaves=0.099999994;
@@ -429,7 +436,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=240;
+		items=241;
 		class Item0
 		{
 			dataType="Marker";
@@ -6891,6 +6898,17 @@ class Mission
 			id=406;
 			type="Land_Carrier_01_base_F";
 			atlOffset=62.280926;
+		};
+		class Item240
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2405.8787,0,13262.645};
+			};
+			id=417;
+			type="AdvancedAICommand_Commanders";
+			atlOffset=116.52367;
 		};
 	};
 	class Connections

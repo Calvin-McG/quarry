@@ -14,7 +14,7 @@ class Header
 
 
 
-onLoadName = "Quarry 8";
+onLoadName = "Quarry 9";
 onLoadMission = "Kill your quarries and do your best to stay alive";
 author = "Calvin";
 loadScreen = "quarry.jpg";
@@ -31,7 +31,7 @@ class Params
     {
                 title = "Life time for contestants in minutes";
                 values[] = {10,15,20,30};
-                default = 20;
+                default = 15;
     };
 
     //#include "\a3\functions_f\Params\paramDaytimeHour.hpp"
