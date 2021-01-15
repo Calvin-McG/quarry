@@ -1,5 +1,3 @@
-execVM "R3F_LOG\init.sqf";
-
 enableSaving [false, false];
 
 MISSION_ROOT = call {
