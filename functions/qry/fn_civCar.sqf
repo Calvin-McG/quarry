@@ -6,7 +6,10 @@ if (isServer) then {
 	clearMagazineCargoGlobal _unit;
 	clearItemCargoGlobal _unit;
 	clearBackpackCargoGlobal _unit;
-	
+
+
+	player action["lighton", _unit];
+
 	//Random gear
 	_gearOpt = round random 9; //Generates number from 0 to 9. 8+ will result in the default case being called
 	switch (_gearOpt) do {
@@ -45,6 +48,9 @@ if (isServer) then {
         };
         case 7: {//Tactical ladder
             _unit addBackpack "ACE_TacticalLadder_Pack";
+        };
+        case 8: {//Shitload of rocks
+            _unit addMagazineCargoGlobal ["Cre8ive_Mag_Stone",69];
         };
 		default {//Spare ammo, medical supplies
 			_unit addMagazineCargoGlobal ["11Rnd_45ACP_Mag",5];

@@ -26,7 +26,7 @@ if (local _unit) then {
     _unit addWeaponItem ["rhsusf_weap_glock17g4", "ACE_muzzle_mzls_smg_02"];
     _unit addWeaponItem ["rhsusf_weap_glock17g4", "acc_flashlight_pistol"];
 
-	_unit addMagazines["Chemlight_blue",4];
+	_unit addMagazines["ACE_Chemlight_HiBlue",4];
 	
 	_unit addItem "FirstAidKit";
 	_unit addItem "FirstAidKit";
