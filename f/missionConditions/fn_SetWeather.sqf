@@ -48,7 +48,7 @@ switch (_weather) do
 // Overcast (Calm)
 	case 1:
 	{
-		_MissionOvercast = 0.49;
+		_MissionOvercast = 1;
 		_MissionRain = 0;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;

@@ -42,7 +42,7 @@ class Params
     		title = "Weather";
     		values[] = {0,1,2,3};
     		texts[] = {"Calm","Overcast","Rain","Storm"};
-    		default = 0;
+    		default = 1;
     		function = "f_fnc_setWeather";		// This function is called to apply the values
     		isGlobal = 0;						// Execute this only on the server
     		code = "f_param_weather = %1";
@@ -51,8 +51,8 @@ class Params
     	class f_param_fog
     	{
     		title = "Fog";
-    		values[] = {0,1,2};
-    		texts[] = {"None","Light","Heavy"};
+    		values[] = {0,1,2,3};
+    		texts[] = {"None","Light","Medium","Heavy"};
     		default = 0;
     		function = "f_fnc_SetFog";			// This function is called to apply the values
     		isGlobal = 0;						// Execute this only on the server
