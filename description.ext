@@ -10,16 +10,13 @@ class Header
 	maxPlayers = 44;
 };
 
-
-
-onLoadName = "Quarry 9";
+onLoadName = "Quarry 10";
 onLoadMission = "Kill your quarries and do your best to stay alive";
 author = "Calvin";
 loadScreen = "quarry.jpg";
 
 respawn = 1;
 respawndelay = 3;
-//respawnTemplates[] = {"Spectator"};
 respawnTemplates[] = {"Seagull","f_spectator"};
 disabledAI = true;
 
@@ -29,11 +26,8 @@ class Params
     {
                 title = "Life time for contestants in minutes";
                 values[] = {10,15,20,30};
-                default = 15;
+                default = 20;
     };
-
-    //#include "\a3\functions_f\Params\paramDaytimeHour.hpp"
-    //#include "\a3\functions_f\Params\paramWeather.hpp"
 
     	class f_param_weather
     	{

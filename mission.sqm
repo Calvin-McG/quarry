@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2;
+		nextID=6;
 	};
 	class Camera
 	{
@@ -433,7 +433,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="CA_Calvin_TVT44_Quarry_9";
+		briefingName="CA_Calvin_TVT44_Quarry_10";
 		overviewText="The Ship/Ass Creed MP but in Arma";
 		resistanceEast=1;
 		timeOfChanges=28800;
@@ -3422,7 +3422,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3664.666,19.352148,14036.068};
-				angles[]={0,5.4285889,-0};
+				angles[]={0,5.4285889,0};
 			};
 			side="Empty";
 			flags=4;
@@ -8023,6 +8023,7 @@ class Mission
 			a=0.5;
 			b=0.5;
 			id=484;
+			atlOffset=3.8146973e-006;
 		};
 		class Item199
 		{
@@ -8058,6 +8059,8 @@ class Mission
 			text="The fookin' pub, mate";
 			type="mil_warning";
 			colorName="ColorGreen";
+			a=0.5;
+			b=0.5;
 			id=487;
 			atlOffset=0.00035762787;
 		};
@@ -8282,14 +8285,14 @@ class Mission
 			dataType="Layer";
 			name="Castle";
 			id=558;
-			atlOffset=0.69998074;
+			atlOffset=185.97;
 		};
 		class Item215
 		{
 			dataType="Layer";
 			name="Mosque";
 			id=578;
-			atlOffset=24.21006;
+			atlOffset=185.97;
 		};
 	};
 	class Connections
