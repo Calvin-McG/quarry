@@ -121,8 +121,8 @@ for [{_i=0}, {_i<=10000}, {_i=_i+1}] do
 			} else { // Player
 				if (_canSeeAll) then { // If I am a cop
 					_mkrName setMarkerTextLocal name _untName;
-	
-					_mkrName setMarkerTextLocal format ["%1 (their quarrel is %2)", name _untName, name (_untName getVariable["qry_target",objNull])];
+
+	                _mkrName setMarkerTextLocal format ["%1 (their quarry is %2)", name _untName, name (_untName getVariable["qry_target",objNull])];
 					
 					//_mkrName setMarkerColorLocal "ColorRed";
 					_mkrName setMarkerAlphaLocal 1;
@@ -135,7 +135,7 @@ for [{_i=0}, {_i<=10000}, {_i=_i+1}] do
 	_mkrName setMarkerPosLocal [(getPos _unt select 0),(getPos  _unt select 1)];	
 	
 
-	sleep 6;
+	sleep 30;
 };
 
 
