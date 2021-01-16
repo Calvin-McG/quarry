@@ -29,6 +29,7 @@ if (local _unit) then {
 	_unit addMagazines["ACE_Chemlight_HiBlue",4];
 	
 	_unit addItem "FirstAidKit";
+	_unit addItem "ACE_Flashlight_XL50";
 	_unit addItem "FirstAidKit";
 	_unit addItem "FirstAidKit";
 	_unit addItem "ACE_epinephrine";

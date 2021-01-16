@@ -46,6 +46,7 @@ if (local _unit) then {
 	_unit addmagazine "Chemlight_yellow";
 	_unit addmagazine "SatchelCharge_Remote_Mag";
 	_unit addItem "ACE_Earplugs";
+	_unit addItem "ACE_Flashlight_XL50";
 	_unit addmagazines ["ACE_M84",1];
 	_unit addmagazines ["MiniGrenade",1];
 	switch (_gearOpt) do {
