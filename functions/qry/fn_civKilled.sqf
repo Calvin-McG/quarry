@@ -20,12 +20,12 @@ if (hasInterface) then {
                 if (side _killed == civilian) then {
                     // was a civilan
                     if (_killed getVariable["qry_target",objNull] == player) then {
-                        systemChat format["You killed %1 and you were their quarry.",name _killed];
+                        systemChat format["You killed %1 and they were hunting you.",name _killed];
                     } else {
                         if (_hasWeapon or _hadWeapon or _wasSpeeding) then {
-                            systemChat format["You killed %1 and you were NOT their quarry but you will recieve no penalty.",name _killed];
+                            systemChat format["You killed %1 and they were not hunting you, but you will recieve no penalty.",name _killed];
                         } else {
-                            systemChat format["You killed %1 and you were NOT their quarry you will lose 2 minutes of lifetime.",name _killed];
+                            systemChat format["You killed %1 and they were not hunting you. You will lose 2 minutes of lifetime.",name _killed];
                             qry_hp = qry_hp - 120;
                             player setVariable["qry_hp",qry_hp,true];
                         };
@@ -36,9 +36,9 @@ if (hasInterface) then {
                 if (side _killed == civilian) then {
                   //Cop killed civilian  
                     if (_hasWeapon or _hadWeapon or _wasSpeeding) then {
-                        systemChat format["You killed %1 and it seems they were indeed a threat.",name _killed];
+                        systemChat format["You killed %1 and they were a valid threat.",name _killed];
                     } else {
-                        systemChat format["You killed %1 but it seems they weren't a threat. Your smg has been confiscated.",name _killed];
+                        systemChat format["You killed %1 and they were not a threat. Your smg has been confiscated, Pig.",name _killed];
                         player removeWeapon 'hlc_smg_9mmar';
                     };  
                 };
