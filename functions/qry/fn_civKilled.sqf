@@ -38,9 +38,8 @@ if (hasInterface) then {
                     if (_hasWeapon or _hadWeapon or _wasSpeeding) then {
                         systemChat format["You killed %1 and it seems they were indeed a threat.",name _killed];
                     } else {
-                        systemChat format["You killed %1 but it seems they weren't a threat. You must file some paperwork at the station to get your primary weapon back.",name _killed];
-                        player setVariable["qry_paperWork",true];
-                        player removeWeapon 'hlc_smg_mp5a4';
+                        systemChat format["You killed %1 but it seems they weren't a threat. Your smg has been confiscated.",name _killed];
+                        player removeWeapon 'hlc_smg_9mmar';
                     };  
                 };
                 
