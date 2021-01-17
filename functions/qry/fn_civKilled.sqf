@@ -48,12 +48,12 @@ if (hasInterface) then {
 	} else {
 		if (player == _killed) then {
 			if (side _killer == west) then {
-				systemChat format["You were killed by police officer %1.",name _killer];
+				systemChat format["You were killed by officer %1.",name _killer];
 			} else {
 				if (_killer getVariable["qry_target",objNull] == player) then {
-					systemChat format["You were killed by %1 and you were their quarry.",name _killer];
+					systemChat format["You were killed by %1 and they were hunting you.",name _killer];
 				} else {
-					systemChat format["You were killed by %1 and you were not their quarry.",name _killer];
+					systemChat format["You were killed by %1, but they were not hunting you.",name _killer];
 				};
 			};
 		};
