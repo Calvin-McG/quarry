@@ -7,9 +7,6 @@ if (isServer) then {
 	clearItemCargoGlobal _unit;
 	clearBackpackCargoGlobal _unit;
 
-
-	player action["lighton", _unit];
-
 	//Random gear
 	_gearOpt = round random 9; //Generates number from 0 to 9. 8+ will result in the default case being called
 	switch (_gearOpt) do {
