@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=579;
+		nextID=583;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=6;
+		nextID=8;
 	};
 	class Camera
 	{
-		pos[]={3617.0403,50.843826,12976.96};
-		dir[]={0.98146635,-0.19097242,-0.016816286};
-		up[]={0.19100027,0.98158365,-0.0032725041};
-		aside[]={-0.017131384,-1.8260471e-007,-0.99986726};
+		pos[]={3710.6646,32.122997,12996.644};
+		dir[]={0.77629513,-0.60513306,0.17712027};
+		up[]={0.59001613,0.79608446,0.13462079};
+		aside[]={0.22246227,-3.3841934e-007,-0.97502232};
 	};
 };
 binarizationWanted=0;
@@ -5667,8 +5667,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3285.4646,9.1126671,12455.269};
-				angles[]={0,4.4681597,0};
+				position[]={3285.4646,9.1122742,12455.269};
+				angles[]={0,4.4681649,0};
 			};
 			side="Empty";
 			flags=4;
@@ -5678,7 +5678,7 @@ class Mission
 			};
 			id=439;
 			type="UK3CB_ADP_B_LandRover_Open";
-			atlOffset=0.0090789795;
+			atlOffset=0.0086860657;
 			class CustomAttributes
 			{
 				class Attribute0
