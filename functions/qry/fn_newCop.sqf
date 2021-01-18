@@ -32,6 +32,8 @@ if (local _unit) then {
 	_unit addItem "ACE_Flashlight_XL50";
 	_unit addItem "FirstAidKit";
 	_unit addItem "FirstAidKit";
+	_unit addItem "FirstAidKit";
+    _unit addItem "FirstAidKit";
 	_unit addItem "ACE_epinephrine";
 	_unit addItem "ACE_epinephrine";
 	_unit addItem "ACE_EarPlugs";
