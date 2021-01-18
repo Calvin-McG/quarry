@@ -85,7 +85,7 @@ if (hasInterface) then {
 	_sit = player createDiaryRecord ["diary", ["Credits","
 	Sources of Inspiration: This is inspired by the Shacktac 'The Game' gamemode which was inspired by the game called 'The ship', which was made by Kevb0.<br/><br/>
 	Rifling Matters (Austrialian Arma group) made a version called 'Quarry', and it is this name we use. <br/><br/>
-	Snippers developed the version for the Team One Tactical Community.<br/></br><br/><br/>
+	Snippers developed the version for the Team One Tactical Community.<br/></br>
 	Calvin extended that version for Combined Arms.
 	"]];
 	
@@ -103,6 +103,7 @@ if (hasInterface) then {
 					if (!isNull Target) then {
 						if (alive Target) then {
 							hint format["Your target: %1",name Target];
+							systemChat format["Your target: %1",name Target];
 						};
 						myTargetList pushBack Target;
 					};
