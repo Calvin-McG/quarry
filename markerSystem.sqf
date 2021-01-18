@@ -80,9 +80,10 @@ if (toLower (faction player) == "BLU_F") then {
 };
 
 if (_unt == player) then {
-	_mkrName setMarkerColorLocal "ColorGreen";
+	_mkrName setMarkerColorLocal "ColorPink";
 	_mkrName setMarkerTextLocal "Me";
-} else {
+}
+else {
 	if (side _unt == west) then {
 		_mkrName setMarkerColorLocal "ColorBlue";
 	} else {
@@ -113,7 +114,7 @@ for [{_i=0}, {_i<=10000}, {_i=_i+1}] do
 		if (_untName == Target) then { // Quary marker
 			_mkrName setMarkerTextLocal format["%1 (Your Quarry)", name _untName];
 			_mkrName setMarkerAlphaLocal 1;
-			//Following two lines put marker within 100m of location
+			//Following lines put marker within 100m of location, and turn it into a brush with radius 100.
 		    _randomPosAroundPlayer = [[[position _unt, 100]],[]] call BIS_fnc_randomPos;
 	        _mkrName setMarkerShapeLocal "ELLIPSE";
 	        _mkrName setMarkerSizeLocal [100,100];
@@ -126,7 +127,8 @@ for [{_i=0}, {_i<=10000}, {_i=_i+1}] do
 				//_mkrName setMarkerColorLocal "ColorGreen";
 				//_mkrName setMarkerTextLocal name _untName;
 				//_mkrName setMarkerTextLocal "You";
-			} else { // Player
+			}
+			else { // Player
 				if (_canSeeAll) then { // If I am a cop or spectator
 					_mkrName setMarkerTextLocal name _untName;
 
@@ -134,7 +136,8 @@ for [{_i=0}, {_i<=10000}, {_i=_i+1}] do
 
 					//_mkrName setMarkerColorLocal "ColorRed";
 					_mkrName setMarkerAlphaLocal 1;
-				} else {
+				}
+				else {
 					_mkrName setMarkerAlphaLocal 0;
 				};
 			};
